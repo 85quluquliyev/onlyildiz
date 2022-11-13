@@ -1,0 +1,74 @@
+{% extends 'base/index.html' %}
+{% load static %}
+{% block content %}
+<!-- ======= Services Section ======= -->
+  <section id="services" class="services">
+
+    <div class="container" data-aos="fade-up" style="margin-top: 5rem;">
+
+      <div class="row gy-4">
+
+        <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
+          <div class="service-box blue">
+            <img src="{% static 'assets/img/enk__1_-removebg-preview.png' %}" width="100" alt="">
+            <h3>Hatıra Defteri</h3>
+            <p>Hatıra Defterine birşeyler yazarak, kendin için bir anı oluşturabilirsin</p>
+            <a href={% url 'defteranasayfa' %} class="read-more"><span>Hadi</span> <i class="bi bi-arrow-right"></i></a>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
+          <div class="service-box orange">
+            <img src="{% static 'assets/img/enk-removebg-preview.png' %}"  width="100" alt="">
+            <h3>Yorum</h3>
+            <p>Sana eğitim veren insanlar hakkında yorum yazabilirsin.</p>
+            <a href="#" class="read-more"><span>Hadi</span> <i class="bi bi-arrow-right"></i></a>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="400">
+          <div class="service-box green">
+            <img src="{% static 'assets/img/enk__2_-removebg-preview.png' %}" width="100" alt="">
+            <h3>Staj</h3>
+            <p>Sadece bir defa mail atarak 500+ şirkete CV gönderebilirsin.</p>
+            <a href="#" class="read-more"><span>Hadi</span> <i class="bi bi-arrow-right"></i></a>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="500">
+          <div class="service-box red">
+            <img src="{% static 'assets/img/enk__3_-removebg-preview.png' %}" width="100" alt="">
+            <h3>Takım Arkadaşı</h3>
+            <p>Bir projen var mı? Takım arkadaşlarını hızlıca bul.</p>
+            <a href="#" class="read-more"><span>Hadi</span> <i class="bi bi-arrow-right"></i></a>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="600">
+          <div class="service-box purple">
+            <img src="{% static 'assets/img/enk__4_-removebg-preview.png' %}" width="100" alt="">
+            <h3>Notlar</h3>
+            <p>Ders notları ve çıkmış soruları burda bulabilirsin</p>
+            <a href="#" class="read-more"><span>Hadi</span> <i class="bi bi-arrow-right"></i></a>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="700">
+          <div class="service-box pink">
+            <img src="{% static 'assets/img/enk__5_-removebg-preview.png' %}" width="100" alt="">
+            <h3>Etkinlikler</h3>
+            <p>Her yere tek başına mı gidiyorsun? Kendine arkadaş bul.</p>
+            <a href="#" class="read-more"><span>Hadi</span> <i class="bi bi-arrow-right"></i></a>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+
+  </section><!-- End Services Section -->
+{% endblock  %}
+
+</body>
+
+</html>

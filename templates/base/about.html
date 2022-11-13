@@ -1,0 +1,70 @@
+{% load static %}
+<section class="services">
+
+  <div id="services" class="container" data-aos="fade-up" style="margin-top: 3rem;">
+    <header class="section-header">
+      <p>Neler Yapabilirsin Gör</p>
+    </header>
+
+    <div  class="row gy-4">
+
+      <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
+        <div class="service-box orange">
+          <img src="{% static 'assets/img/yorum.png' %}"  width="100" alt="">
+          <h3>Yorum</h3>
+          <p>Eğitim aldığınız kurumdaki akademisyenler hakkında yorum yapabilir veya yapılan yorumları görebilirsiniz.</p>
+          <a href="{% url 'commentresearchpage' %}" class="read-more"><span>Hadi</span> <i class="bi bi-arrow-right"></i></a>
+        </div>
+      </div>
+
+      <div  class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
+        <div class="service-box blue">
+          <img src="{% static 'assets/img/hatiradefteri.png' %}"  width="100" alt="">
+          <h3>Hatıra Defteri</h3>
+          <p>Hatıra Defterine birşeyler yazarak, kendin için bir anı oluşturabilirsin.</p>
+          <a href="{% url 'memorybook' %}" class="read-more"><span>Hadi</span> <i class="bi bi-arrow-right"></i></a>
+        </div>
+      </div>
+
+      <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="600">
+        <div class="service-box purple">
+          <img src="{% static 'assets/img/note.png' %}"  width="100" alt="">
+          <h3>Notlar</h3>
+          <p>Ders notlarına ve çıkmış sorulara buradan ulaşabilirsiniz.</p>
+          <a href="{% url 'notespage' %}" class="read-more"><span>Hadi</span> <i class="bi bi-arrow-right"></i></a>
+        </div>
+      </div>
+
+
+      <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="500">
+        <div class="service-box red">
+          <img src="{% static 'assets/img/sosyal.png' %}"  width="100" alt="">
+          <h3>Sosyal Ağ</h3>
+          <p>Üniversitede okuyan belirli alanlarda uzman kişilerle bağlantı kurabilirsin.</p>
+          <a href="{% url 'homepage' %}" class="read-more"><span>Yakında..</span></a>
+        </div>
+      </div>
+
+      <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="400">
+        <div class="service-box green">
+          <img src="{% static 'assets/img/staj.png' %}" width="100" alt="">
+          <h3>Staj</h3>
+          <p>Üniversite tarafından onaylanmış 100+ kuruma tek tıkla e-posta göndererek staj başvurusunda bulunabilirsiniz.</p>
+          <a href="{% url 'homepage' %}" class="read-more"><span>Yakında..</span></a>
+        </div>
+      </div>
+
+      <div  class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="700">
+        <div class="service-box pink">
+          <img src="{% static 'assets/img/group.png' %}"  width="100" alt="">
+          <h3>Topluluklar</h3>
+          <p>Sizinle aynı şeylerden zevk alan insanlarla vakit geçirmek için topluluklara katılabilirsiniz.</p>
+          <a href="{% url 'homepage' %}" class="read-more"><span>Yakında..</span></a>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+
+</section><!-- End Services Section -->
