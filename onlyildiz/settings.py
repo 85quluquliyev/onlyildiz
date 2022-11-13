@@ -24,10 +24,10 @@ SECRET_KEY = 'django-insecure-d%&37s&=!=vve(f8#%#a0%0xo6c7r@3uam(x(+t9j4150igq!5
 #SECRET_KEY = getenv('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = getenv('IS_DEVELOPMENT', True)
+DEBUG = False
 
 ALLOWED_HOSTS = [
-     "https://onlyildizdeneme.herokuapp.com/"
+     "onlyildiz.com","www.onlyildiz.com"
 ]
 
 
@@ -84,9 +84,13 @@ WSGI_APPLICATION = 'onlyildiz.wsgi.application'
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
 
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+     'default': {
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': 'onlyildiz',
+        'USER': 'quluquliyev',
+        'PASSWORD': 'xsaq005500',
+        'HOST': 'localhost',
+        'PORT': '',
     }
 }
 
@@ -130,18 +134,16 @@ USE_TZ = True
 STATIC_URL = '/static/'
 MEDIA_URL = '/images/'
 
-STATICFILES_DIRS = [
-    BASE_DIR / 'static'
-]
+#STATICFILES_DIRS = [
+    #BASE_DIR / 'static'
+#]
 
 MEDIA_ROOT = BASE_DIR / 'static/assets/img'
-STATIC_ROOT = BASE_DIR / 'staticfiles'
+STATIC_ROOT = BASE_DIR / 'static'
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-# Configure Django App for Heroku.
-import django_heroku
-django_heroku.settings(locals())
+
