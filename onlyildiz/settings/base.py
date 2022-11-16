@@ -13,7 +13,7 @@ https://docs.djangoproject.com/en/3.2/ref/settings/
 from pathlib import Path
 from os import getenv
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
-BASE_DIR = Path(__file__).resolve().parent.parent
+BASE_DIR = Path(__file__).resolve().parent.parent.parent
 
 
 # Quick-start development settings - unsuitable for production
@@ -21,14 +21,11 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = 'django-insecure-d%&37s&=!=vve(f8#%#a0%0xo6c7r@3uam(x(+t9j4150igq!5'
-#SECRET_KEY = getenv('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
 
-ALLOWED_HOSTS = [
-     "onlyildiz.com","www.onlyildiz.com"
-]
+
+ALLOWED_HOSTS = []
 
 
 # Application definition
@@ -83,16 +80,7 @@ WSGI_APPLICATION = 'onlyildiz.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
 
-DATABASES = {
-     'default': {
-        'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'onlyildiz',
-        'USER': 'quluquliyev',
-        'PASSWORD': 'xsaq005500',
-        'HOST': 'localhost',
-        'PORT': '',
-    }
-}
+
 
 
 # Password validation
@@ -139,7 +127,7 @@ MEDIA_URL = '/images/'
 #]
 
 MEDIA_ROOT = BASE_DIR / 'static/assets/img'
-STATIC_ROOT = BASE_DIR / 'static'
+
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
