@@ -11,9 +11,8 @@ https://docs.djangoproject.com/en/3.2/ref/settings/
 """
 
 from pathlib import Path
-from os import getenv
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
-BASE_DIR = Path(__file__).resolve().parent.parent.parent
+BASE_DIR = Path(__file__).resolve().parent.parent
 
 
 # Quick-start development settings - unsuitable for production
@@ -24,8 +23,11 @@ SECRET_KEY = 'django-insecure-d%&37s&=!=vve(f8#%#a0%0xo6c7r@3uam(x(+t9j4150igq!5
 
 # SECURITY WARNING: don't run with debug turned on in production!
 
+DEBUG = False
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = [
+     "onlyildiz.com","www.onlyildiz.com"
+]
 
 
 # Application definition
@@ -80,7 +82,16 @@ WSGI_APPLICATION = 'onlyildiz.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
 
-
+DATABASES = {
+     'default': {
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': 'onlyildiz',
+        'USER': 'quluquliyev',
+        'PASSWORD': 'xsaq005500',
+        'HOST': 'localhost',
+        'PORT': '',
+    }
+}
 
 
 # Password validation
@@ -122,10 +133,7 @@ USE_TZ = True
 STATIC_URL = '/static/'
 MEDIA_URL = '/images/'
 
-#STATICFILES_DIRS = [
-    #BASE_DIR / 'static'
-#]
-
+STATIC_ROOT = BASE_DIR / 'static'
 MEDIA_ROOT = BASE_DIR / 'static/assets/img'
 
 
