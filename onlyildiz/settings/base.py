@@ -11,8 +11,10 @@ https://docs.djangoproject.com/en/3.2/ref/settings/
 """
 
 from pathlib import Path
+import os
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
-BASE_DIR = Path(__file__).resolve().parent.parent
+BASE_DIR = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+#Path(__file__).resolve().parent.parent
 
 
 # Quick-start development settings - unsuitable for production
@@ -20,14 +22,12 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = 'django-insecure-d%&37s&=!=vve(f8#%#a0%0xo6c7r@3uam(x(+t9j4150igq!5'
+#SECRET_KEY = getenv('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
 
-DEBUG = False
 
-ALLOWED_HOSTS = [
-     "onlyildiz.com","www.onlyildiz.com"
-]
+
 
 
 # Application definition
@@ -133,7 +133,10 @@ USE_TZ = True
 STATIC_URL = '/static/'
 MEDIA_URL = '/images/'
 
-STATIC_ROOT = BASE_DIR / 'static'
+#STATICFILES_DIRS = [
+    #BASE_DIR / 'static'
+#]
+
 MEDIA_ROOT = BASE_DIR / 'static/assets/img'
 
 
